@@ -1,0 +1,32 @@
+3. Implement stack operations using arrays and linked lists.[a]
+#include <stdio.h>
+#define MAX 5
+
+int stack[MAX];
+int top = -1;
+
+// Push
+void push(int value) {
+    if (top == MAX - 1)
+        printf("Stack Overflow\n");
+    else {
+        top++;
+        stack[top] = value;
+        printf("Pushed %d\n", value);
+    }
+}
+output:-
+Pushed 10
+Pushed 20
+Pushed 30
+Stack elements:
+30
+20
+10
+Popped 30
+Stack elements:
+20
+10
+
+
+=== Code Execution Successful ===
